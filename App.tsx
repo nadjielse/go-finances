@@ -1,13 +1,14 @@
-import {Text, View } from 'react-native';
-
-import { Home } from './src/screens/Home';
-
 import {
   Poppins_400Regular,
   Poppins_500Medium,
   Poppins_700Bold,
   useFonts
 } from '@expo-google-fonts/poppins';
+
+
+import { Dashboard } from './src/screens/Dashboard';
+
+import { Loading } from './src/components/Loading';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -18,13 +19,11 @@ export default function App() {
 
   if(!fontsLoaded){
     return (
-      <View>
-        <Text>Fontes ainda não carregaram</Text>
-      </View>
+      <Loading/>
     )
   }
     return (
-      <Home/>
+      <Dashboard/>
     );
   }
 
