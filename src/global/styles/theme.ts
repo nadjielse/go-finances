@@ -20,6 +20,7 @@ export default{
   fontSize:{
     sm: 14,
     lg: 20,
-    xl: 30
+    xl: 30,
+    xm:12,
   }
 }
