@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal:26,
     paddingTop:19,
     marginRight:16,
-    paddingBottom:55,
+    paddingBottom:50,
   },
   containerHeader:{
     flexDirection:'row',
@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
     fontFamily:THEMES.fonts.regular
   },
   containerFooter:{
-    marginTop:56
+    marginTop:40
   },
   textAmount:{
     fontSize:THEMES.fontSize.xl,

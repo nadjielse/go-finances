@@ -1,3 +1,5 @@
+import { StatusBar} from 'react-native';
+
 import {
   Poppins_400Regular,
   Poppins_500Medium,
@@ -23,7 +25,14 @@ export default function App() {
     )
   }
     return (
-      <Dashboard/>
+      <>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        />
+        <Dashboard/>   
+      </>
     );
   }
 

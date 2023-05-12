@@ -52,7 +52,14 @@ export const styles = StyleSheet.create({
     width:'100%',
     marginTop:120,
   },
-  transactionsContainer:{
-    
+  transactionsListContainer:{
+    flex:1,
+    paddingHorizontal:24,
+    marginTop:74
+  },
+  titleList:{
+    fontSize:THEMES.fontSize.lg,
+    fontFamily:THEMES.fonts.regular,
+    marginBottom:15,
   }
 });

@@ -10,7 +10,7 @@ export interface DataProps{
   date: string;
 }
 
-export const data:DataProps[] = [
+export const transactionsArray:DataProps[] = [
   {
     id:'1',
     type:'positive',

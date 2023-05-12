@@ -3,6 +3,7 @@ import { AntDesign } from '@expo/vector-icons';
 
 import { ResumeCard } from "../../components/ResumeCard";
 
+import {transactionsArray} from '../../data/transactions';
 
 import {styles} from './styles';
 
@@ -33,7 +34,7 @@ export function Dashboard(){
         style={styles.resumeCards}
         horizontal
         showsHorizontalScrollIndicator={false}
-        contentContainerStyle={{marginHorizontal:24}}
+        contentContainerStyle={{paddingHorizontal:10}}
       >
         <ResumeCard
           type="entry"
@@ -60,13 +61,17 @@ export function Dashboard(){
         />
       </ScrollView>
 
-      <View style={styles.transactionsContainer}>
-        <Text>Listagem</Text>
+      <View style={styles.transactionsListContainer}>
+        <Text style={styles.titleList}>Listagem</Text>
         
         <FlatList 
-          data={[]}
-          keyExtractor={(item)=>item}
+          data={transactionsArray}
+          showsVerticalScrollIndicator={false}
+          keyExtractor={(item)=>item.id}
           renderItem={()=>{
+            return (<></>)
+          }}
+          ListEmptyComponent={()=>{
             return (<></>)
           }}
         />
