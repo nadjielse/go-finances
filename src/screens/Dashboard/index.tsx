@@ -1,5 +1,6 @@
-import { FlatList, Image, ScrollView, Text, View } from "react-native";
+import { FlatList, Image, ScrollView, Text, View,TouchableOpacity } from "react-native";
 import { AntDesign } from '@expo/vector-icons'; 
+import {useNavigation} from '@react-navigation/native';
 
 import { ResumeCard } from "../../components/ResumeCard";
 
@@ -8,6 +9,12 @@ import {transactionsArray} from '../../data/transactions';
 import {styles} from './styles';
 
 export function Dashboard(){
+
+  const navigation = useNavigation();
+  function handleGoBackHome(){
+    navigation.goBack(); //
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.containerHeader}>
@@ -24,9 +31,12 @@ export function Dashboard(){
             </View>
           </View>
 
-          <View style={styles.icone}>
+          <TouchableOpacity 
+            onPress={handleGoBackHome} 
+            style={styles.icone}
+          >
             <AntDesign name="poweroff" size={24} color="white" />
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
 

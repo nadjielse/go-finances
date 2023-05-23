@@ -24,7 +24,7 @@ export function ResumeCard({type,title,amount,lastTransaction,nameIcon}:Props){
       <View style={[
         styles.container,
         {backgroundColor: type === 'total'?THEMES.colors.secondary:THEMES.colors.shape}
-      ]}>
+      ] }>
         <View style={styles.containerHeader}>
           <Text style={[styles.titleHeader,
             {color: type==='total'? THEMES.colors.shape: THEMES.colors.text_dark}]}

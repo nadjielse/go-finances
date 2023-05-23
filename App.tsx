@@ -11,6 +11,7 @@ import {
 import { Dashboard } from './src/screens/Dashboard';
 
 import { Loading } from './src/components/Loading';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -31,7 +32,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        <Dashboard/>   
+        <Routes/>   
       </>
     );
   }
