@@ -15,7 +15,11 @@ export const styles = StyleSheet.create({
   amount: {
     fontFamily: "Poppins_400Regular",
     fontSize: 20,
-    marginBottom: 10
+    marginBottom: 10,
+    color: "#12A454"
+  },
+  negativeAmount: {
+    color: "#E83F5B"
   },
   info: {
     flexDirection: "row",

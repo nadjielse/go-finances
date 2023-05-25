@@ -10,17 +10,38 @@ interface Props {
 };
 
 export function TransactionCard( props: Props ) {
+  function Amount(props: Props) {
+    function format() {
+      let amount = props.transaction.amount;
 
-  function formatAmount(amount: string, type: "positive" | "negative") {
-    const prefix = type === "positive" ? "" : "- ";
+      if(props.transaction.type === "negative") {
+        amount = "- " + amount;
+      }
 
-    return prefix + amount;
+      return amount;
+    }
+
+    function pickStyle() {
+      let style = styles.amount;
+      
+      if(props.transaction.type === "negative") {
+        style = { ...style, ...styles.negativeAmount };
+      }
+
+      return style;
+    }
+
+    return (
+      <Text style={ pickStyle() }>
+        { format() }
+      </Text>
+    )
   }
 
   return (
     <View style={ styles.container }>
       <Text style={ styles.title }>{ props.transaction.title }</Text>
-      <Text style={ styles.amount }>{ props.transaction.amount }</Text>
+      <Amount transaction={ props.transaction }/>
 
       <View style={ styles.info }>
         <View style={ styles.category }>
