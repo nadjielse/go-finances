@@ -3,6 +3,7 @@ import { AntDesign } from '@expo/vector-icons';
 import {useNavigation} from '@react-navigation/native';
 
 import { ResumeCard } from "../../components/ResumeCard";
+import { TransactionCard } from "../../components/TransactionCard";
 
 import {transactionsArray} from '../../data/transactions';
 
@@ -78,12 +79,12 @@ export function Dashboard(){
           data={transactionsArray}
           showsVerticalScrollIndicator={false}
           keyExtractor={(item)=>item.id}
-          renderItem={()=>{
-            return (<></>)
-          }}
-          ListEmptyComponent={()=>{
-            return (<></>)
-          }}
+          renderItem={ ({ item }) => (
+            <TransactionCard transaction={ item }/>
+          )}
+          ListEmptyComponent={ () => (
+            <Text>Sem transações para mostrar!</Text>
+          )}
         />
 
       </View>

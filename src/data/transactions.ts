@@ -5,7 +5,7 @@ export interface DataProps{
   amount: string;
   category: {
     name: string;
-    icon: string;
+    icon: 'dollar-sign' | 'coffee' | 'shopping-bag';
   };
   date: string;
 }
