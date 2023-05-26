@@ -1,33 +1,33 @@
 import { View, Text, TextInput, TouchableOpacity, Button } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
-import { styles } from './styles';
+import * as styled from './styles';
 
 export function Signup() {
   return (
-    <View style={ styles.container }>
+    <styled.Container>
       <View>
-        <TextInput style={ styles.name } placeholder="Nome" />
-        <TextInput style={ styles.price } placeholder="Preço" />
-        <View style={ styles.movementations }>
-          <TouchableOpacity style={ styles.income }>
+        <styled.Name placeholder="Nome" />
+        <styled.Price placeholder="Preço" />
+        <styled.Movementations>
+          <styled.Income>
             <AntDesign name="upcircleo" size={ 24 } color="green" />
-            <Text style={ styles.movementationText }>Income</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={ styles.outcome }>
+            <styled.MovementationText>Income</styled.MovementationText>
+          </styled.Income>
+          <styled.Outcome>
             <AntDesign name="downcircleo" size={ 24 } color="red" />
-            <Text style={ styles.movementationText }>Outcome</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={ styles.category }>
+            <styled.MovementationText>Outcome</styled.MovementationText>
+          </styled.Outcome>
+        </styled.Movementations>
+        <styled.Category>
           <TextInput placeholder="Categoria" />
           <AntDesign name="down" size={ 24 } color="#969CB2" />
-        </View>
+        </styled.Category>
       </View>
 
-      <TouchableOpacity style={ styles.button }>
-        <Text style={ styles.buttonText }>Enviar</Text>
-      </TouchableOpacity>
-    </View>
+      <styled.Button>
+        <styled.ButtonText>Enviar</styled.ButtonText>
+      </styled.Button>
+    </styled.Container>
   )
 }

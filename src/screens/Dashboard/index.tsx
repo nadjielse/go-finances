@@ -7,7 +7,7 @@ import { TransactionCard } from "../../components/TransactionCard";
 
 import {transactionsArray} from '../../data/transactions';
 
-import {styles} from './styles';
+import * as styled from './styles';
 
 export function Dashboard(){
 
@@ -17,32 +17,29 @@ export function Dashboard(){
   }
 
   return (
-    <View style={styles.container}>
-      <View style={styles.containerHeader}>
-        <View style={styles.containerHeaderIcone}>
-          <View style={styles.containerUser}>
-            <Image 
-              style={styles.image}
+    <styled.Container>
+      <styled.ContainerHeader>
+        <styled.ContainerHeaderIcone>
+          <styled.ContainerUser>
+            <styled.Image
               source={{uri:'https://github.com/fabioabrantes.png'}}
             />
 
-            <View style={styles.containerGreeting}>
-              <Text style={styles.greeting}>Olá</Text>
-              <Text style={styles.name}>Fábio</Text>
+            <View>
+              <styled.Greeting>Olá</styled.Greeting>
+              <styled.Name>Fábio</styled.Name>
             </View>
-          </View>
+          </styled.ContainerUser>
 
-          <TouchableOpacity 
-            onPress={handleGoBackHome} 
-            style={styles.icone}
+          <styled.Icone 
+            onPress={handleGoBackHome}
           >
             <AntDesign name="poweroff" size={24} color="white" />
-          </TouchableOpacity>
-        </View>
-      </View>
+          </styled.Icone>
+        </styled.ContainerHeaderIcone>
+      </styled.ContainerHeader>
 
-      <ScrollView 
-        style={styles.resumeCards}
+      <styled.ResumeCards
         horizontal
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{paddingHorizontal:10}}
@@ -70,10 +67,10 @@ export function Dashboard(){
           lastTransaction="01 à 04 de abril"
           nameIcon="dollar-sign"
         />
-      </ScrollView>
+      </styled.ResumeCards>
 
-      <View style={styles.transactionsListContainer}>
-        <Text style={styles.titleList}>Listagem</Text>
+      <styled.TransactionsListContainer>
+        <styled.TitleList>Listagem</styled.TitleList>
         
         <FlatList 
           data={transactionsArray}
@@ -87,7 +84,7 @@ export function Dashboard(){
           )}
         />
 
-      </View>
-    </View>
+      </styled.TransactionsListContainer>
+    </styled.Container>
   )
 }

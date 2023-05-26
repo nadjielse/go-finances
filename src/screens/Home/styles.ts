@@ -1,24 +1,23 @@
-import {StyleSheet} from 'react-native';
+import styled from "styled-components/native";
 import THEMES from '../../global/styles/theme';
 
-export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: THEMES.colors.primary,
-    alignItems:'center',
-    paddingHorizontal:32,
-  },
-  logo:{
-    width:120,
-    height:68,
-    marginTop:114,
-  },
-  title:{
-    textAlign:'center',
-    color:THEMES.colors.shape,
-    fontFamily:THEMES.fonts.medium,
-    fontSize:THEMES.fontSize.xl,
-    marginTop:80,
-  }
-  
-});
+export const Container = styled.View`
+  flex: 1;
+  background-color: ${ THEMES.colors.primary };
+  align-items: center;
+  padding-horizontal: 32px;
+`;
+
+export const Logo = styled.Image`
+  width: 120px;
+  height: 68px;
+  margin-top: 114px;
+`;
+
+export const Title = styled.Text`
+  text-align: center;
+  color: ${ THEMES.colors.shape };
+  font-family: ${ THEMES.fonts.medium };
+  font-size: ${ THEMES.fontSize.xl }px;
+  margin-top: 80px;
+`;

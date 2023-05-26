@@ -1,7 +1,7 @@
 import { View, Text, FlatList } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
-import { styles } from './styles';
+import * as styled from './styles';
 
 const transactions = [
   { id: '1', name: "Casa", price: "R$1200" },
@@ -12,28 +12,27 @@ const transactions = [
 
 export function Summary() {
   return (
-    <View style={ styles.container }>
-      <View style={ styles.body }>
-        <View style={ styles.monthView }>
+    <styled.Container>
+      <styled.Body>
+        <styled.MonthView>
           <AntDesign name="left" size={ 20 } color="black" />
-          <Text style={ styles.month }>maio, 2020</Text>
+          <styled.Month>maio, 2020</styled.Month>
           <AntDesign name="right" size={ 20 } color="black" />
-        </View>
-        <FlatList 
-          style={ styles.list }
+        </styled.MonthView>
+        <styled.List
           data={ transactions }
           keyExtractor={ (item) => item.id }
           renderItem={ ({ item }) => (
-            <View style={ styles.transaction }>
-              <Text style={ styles.transactionName }>{ item.name }</Text>
-              <Text style={ styles.transactionPrice }>{ item.price }</Text>
-            </View>
+            <styled.Transaction>
+              <styled.TransactionName>{ item.name }</styled.TransactionName>
+              <styled.TransactionPrice>{ item.price }</styled.TransactionPrice>
+            </styled.Transaction>
           )}
           ListEmptyComponent={ () => (
             <Text>Sem transações para mostrar!</Text>
           )}
         />
-      </View>
-    </View>
+      </styled.Body>
+    </styled.Container>
   )
 }
