@@ -13,10 +13,6 @@ const transactions = [
 export function Summary() {
   return (
     <View style={ styles.container }>
-      <View style={ styles.header }>
-        <Text style={ styles.title }>Resumo por categoria</Text>
-      </View>
-
       <View style={ styles.body }>
         <View style={ styles.monthView }>
           <AntDesign name="left" size={ 20 } color="black" />

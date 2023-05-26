@@ -6,10 +6,6 @@ import { styles } from './styles';
 export function Signup() {
   return (
     <View style={ styles.container }>
-      <View style={ styles.header }>
-        <Text style={ styles.title }>Cadastro</Text>
-      </View>
-
       <View>
         <TextInput style={ styles.name } placeholder="Nome" />
         <TextInput style={ styles.price } placeholder="Preço" />

@@ -11,7 +11,7 @@ export function Home(){
   const navigation = useNavigation();
   
   function handleGoScreenDashboard(){
-    navigation.navigate('Dashboard');
+    navigation.navigate("RoutesBottomTab");
   }
   return (
     <View style={styles.container}>

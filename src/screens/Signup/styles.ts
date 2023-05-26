@@ -6,18 +6,6 @@ export const styles = StyleSheet.create({
     flex: 1,
     position: "relative"
   },
-  header: {
-    backgroundColor: "#5636D3",
-    height: 100,
-    justifyContent: "flex-end",
-    alignItems: "center"
-  },
-  title: {
-    fontFamily: "Poppins_400Regular",
-    fontSize: 18,
-    color: "#fff",
-    margin: 18
-  },
   name: {
     fontFamily: "Poppins_400Regular",
     color: "#969CB2",
